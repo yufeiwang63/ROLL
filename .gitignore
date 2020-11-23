@@ -1,0 +1,5 @@
+__pycache__/
+data/
+rlkit/*/__pycache__/
+*.swp*
+chester/private/
