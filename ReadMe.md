@@ -107,6 +107,18 @@ We have tried to write the code in a modular way so it would be easy to swap to 
 - You can comment the code segment from line 174 to line 202 in `skewfit_full_experiments_LSTM.py` -- that's the code for pretraining the openCV background subtraction. If your new segmentation method does not need it, you can comment it.  
 With this being said, we have not fully tested if the code would work perfectly with another segmentaion method. Feel free to open an issue or send an email to yufeiw2@andrew.cmu.edu to discuss if you encounter a bug/not sure how exactly to implement about this.
 
+## Citation
+If you find this codebase useful in your research, please consider citing:
+
+```
+@inproceedings{corl2020roll,
+ title={ROLL: Visual Self-Supervised Reinforcement Learning with Object Reasoning},
+ author={Wang, Yufei and Narasimhan Gautham and Lin, Xingyu and Okorn, Brian and Held, David},
+ booktitle={Conference on Robot Learning},
+ year={2020}
+}
+```
+
 
 ## References
 - The code is developed largely based on the Skew-Fit implementation from the official release: https://github.com/vitchyr/rlkit
