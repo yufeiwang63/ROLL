@@ -1,6 +1,6 @@
 # ROLL: Visual Self-Supervised Reinforcement Learning with Object Reasoning
 
-This is the official implementation for the paper "ROLL: Visual Self-Supervised Reinforcement Learning with Object Reasoning", to appear at Conference on Robot Learning (CoRL) 2020. [[Arxiv]()], [[Project Page](https://sites.google.com/andrew.cmu.edu/roll)]  
+This is the official implementation for the paper "ROLL: Visual Self-Supervised Reinforcement Learning with Object Reasoning", to appear at Conference on Robot Learning (CoRL) 2020. [[Arxiv](https://arxiv.org/abs/2011.06777)], [[Project Page](https://sites.google.com/andrew.cmu.edu/roll)]  
 Authors: Yufei Wang*, Gautham Narayan*, Xingyu Lin, Brian Okorn, David Held (* indicates equal contribution)
 
 
@@ -11,7 +11,7 @@ conda env create -f environment.yml
 ```  
 
 2. Activate the conda environment  
-```
+```a
 source prepare.sh
 ```  
 
