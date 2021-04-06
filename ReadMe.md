@@ -45,7 +45,7 @@ Please refer to segmentation/ReadMe.md.
 
 6. Test the above steps: 
 ```
-python ROLL/launchers/launch_lstm_sawyerhurdle.py
+python ROLL/launch_files/launch_lstm_sawyerhurdle.py
 ```  
 If the code runs correctly, two gifs that visualize the learning process should be created very soon.
 
@@ -58,11 +58,11 @@ Sepcifically, there will be:
 
 7. Running ROLL:   
 ```
-python ROLL/launchers/launch_ROLL_sawyerpush.py --no-debug # Puck Pushing
-python ROLL/launchers/launch_ROLL_sawyerhurdlemiddle.py --no-debug # Puck Pushing Hurdle-Bottom
-python ROLL/launchers/launch_ROLL_sawyerhurdle.py --no-debug # Puck Pushing Hurdle-Top
-python ROLL/launchers/launch_ROLL_sawyerdoor.py --no-debug # Door Opening
-python ROLL/launchers/launch_ROLL_sawyerpickup.py --no-debug # Object Pickup
+python ROLL/launch_files/launch_ROLL_sawyerpush.py --no-debug # Puck Pushing
+python ROLL/launch_files/launch_ROLL_sawyerhurdlemiddle.py --no-debug # Puck Pushing Hurdle-Bottom
+python ROLL/launch_files/launch_ROLL_sawyerhurdle.py --no-debug # Puck Pushing Hurdle-Top
+python ROLL/launch_files/launch_ROLL_sawyerdoor.py --no-debug # Door Opening
+python ROLL/launch_files/launch_ROLL_sawyerpickup.py --no-debug # Object Pickup
 ```
 All logs will be dumped at `data/local/{exp-prefix-detailed-date}`  
 You can use `viskit data/local/exp-prefix-detailed-date}` to view the learning progress in a local port.
@@ -97,7 +97,7 @@ In the gif:
 
 #### Train ROLL with pre-trained scene-VAE, objcet-VAE and LSTM   
 The default behaviour of ROLL is to retrain the scene-VAE, object-VAE and LSTM from scratch. This could take a while to run, therefore, we prvodie the option of running ROLL with pre-trained VAE models. The pre-trained models are included at `data/local/pre-trained-models/{env-name}/params.pkl`.   
-To use pre-trained models, simply change the `vae_path` variable under `skewfit_varaint` in the launch files. E.g, for Running ROLL on Puck-Pushing-Hurdle-Bottom with pre-trained VAEs/LSTM, the `vae_path` variable should be set to `data/local/pre-trained-models/puck-push-hurdle-bottom/` (see line 31 at `ROLL/launchers/launch_ROLL_sawyerhurdlemiddle.py`) 
+To use pre-trained models, simply change the `vae_path` variable under `skewfit_varaint` in the launch files. E.g, for Running ROLL on Puck-Pushing-Hurdle-Bottom with pre-trained VAEs/LSTM, the `vae_path` variable should be set to `data/local/pre-trained-models/puck-push-hurdle-bottom/` (see line 31 at `ROLL/launch_files/launch_ROLL_sawyerhurdlemiddle.py`) 
 
 ## Change segmentation method  
 Ideally, ROLL should work with any segmentation code that removes the static background and robot arm. As stated in the paper, in this work we mainly use openCV background subtraction and UNet to achieve these two tasks. Any other segmentation methods that do the same thing should work.  
